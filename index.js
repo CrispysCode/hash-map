@@ -128,4 +128,15 @@ class HashMap {
 
         return valuesArr;
     }
+
+    entries() {
+        const entriesArr = [];
+
+        for (const bucket of this.buckets) {
+            for (const pair of bucket) {
+                entriesArr.push(pair);
+            }
+        }
+        return entriesArr;
+    }
 }
