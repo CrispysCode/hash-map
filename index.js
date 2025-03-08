@@ -140,3 +140,4 @@ class HashMap {
         return entriesArr;
     }
 }
+export { HashMap };
