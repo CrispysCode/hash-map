@@ -1,4 +1,4 @@
-import { HashMap } from "./index.js";
+import { HashMap } from "./HashMap.js";
 const test = new HashMap();
 
 test.set('apple', 'red')
