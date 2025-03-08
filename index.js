@@ -95,4 +95,37 @@ class HashMap {
 
     }
 
+    length() {
+        return this.size;
+    }
+
+    clear() {
+        this.buckets = new Array(this.capacity)
+        .fill(null)
+        .map(() => []);
+        this.size = 0;
+    }
+
+    keys() {
+        const keysArr = [];
+
+        for (const bucket of this.buckets) {
+            for (const [key, value] of bucket) {
+                keysArr.push(key);
+            }
+        }
+        return keysArr;
+    }
+
+    values() {
+        const valuesArr = [];
+
+        for (const bucket of this.buckets) {
+            for (const [key, value] of bucket) {
+                valuesArr.push(value);
+            }
+        }
+
+        return valuesArr;
+    }
 }
